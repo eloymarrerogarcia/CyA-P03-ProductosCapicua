@@ -8,7 +8,6 @@ Los objetivos de esta práctica son:
 * Que el alumnado codifique sus programas siguiendo lo estipulado en la Guía de Estilo de código de Google
 * Profundizar en los conocimientos de Visual Studio Code (VSC)
 * Que el alumnado aprenda a utilizar la utilidad make para el desarrollo de programas simples
-* Ser capaz de utilizar un linter en VSC para formatear adecuadamente el código fuente
 * Poner en práctica los conocimientos de programación estructurada
 
 
@@ -16,14 +15,13 @@ Los objetivos de esta práctica son:
 Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
 que se tendrán en cuenta a la hora de evaluar esta práctica:
 
-* El comportamiento del programa debe ajustarse a lo solicitado en este documento.
-* El programa ha de ser fiel al paradigma de programación orientada a objetos (OOP).
-* Ha de acreditarse capacidad para introducir cambios en el programa desarrollado.
+* El alumnado ha de acreditar conocimientos de la shell de GNU/Linux que le permitan trabajar en ese entorno en su máquina virtual de la asignatura
 * El alumnado ha de acreditar que es capaz de editar ficheros remotos en la VM de la asignautra usando VSC
-* Modularidad: el programa ha de escribirse de modo que las diferentes funcionalidades
-que se precisen sean encapsuladas en funciones y/o métodos cuya extensión textual se mantenga acotada.
 * El código ha de estar escrito de acuerdo al estándar de la [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html).
 * El programa desarrollado deberá compilarse utilizando la herramienta `make` y un fichero `Makefile`.
+* El comportamiento del programa debe ajustarse a lo solicitado en este documento.
+* Ha de acreditarse capacidad para introducir cambios en el programa desarrollado.
+* Modularidad: el programa ha de escribirse de modo que las diferentes funcionalidades que se precisen sean encapsuladas en funciones y/o métodos cuya extensión textual se mantenga acotada.
 
 Si el alumnado tiene dudas respecto a cualquiera de estos aspectos, debiera acudir al
 foro de discusiones de la asignatura para plantearlas allı́. 
@@ -36,21 +34,22 @@ Un [palíndromo](https://es.wikipedia.org/wiki/Pal%C3%ADndromo)
 es una palabra, número o frase que se lee igual de izquierda a derecha que de derecha a
 izquierda.
 Ejemplos de palíndromos son las palabras *arenera*, *Ana*, *arepera* o *reconocer*.
-Si se trata de un numeral, usualmente en notación indoarábiga, se le denomina número capicúa.
+Si se trata de un numeral, usualmente en notación indoarábiga, al palíndromo se le denomina número capicúa.
 
 Teniendo en cuenta esta definición, se puede observar que el mayor número capicúa obtenido como el producto
 de dos números de dos dígitos, es el 9009:
 
 `9009 = 91 × 99`
 
-99000099 es el mayor número capicúa obtenido como producto de dos números de cuatro dígitos:
+Análogamente, 99000099 es el mayor número capicúa obtenido como producto de dos números de cuatro dígitos:
 
 `99000099 = 9999 × 9901`
 
 ### Ejercicio práctico
 Diseñar e implementar en C++ un programa `palindrome_prod.cc` que, dado un número entero `n > 0`, 
 encuentre los números capicúas resultantes de multiplicar dos números de `n` dígitos cada uno. 
-El programa deberá almacenar en un fichero de texto esos números capicúas. 
+El programa deberá almacenar en un fichero de texto esos números capicúas usando una línea diferente para cada
+producto, de forma que un ejemplo de línea de ese fichero serían los dos productos anteriores.
 Como entrada el programa recibirá por línea de comandos el número `n` y el nombre
 de un fichero de salida para almacenar los números capicúa, de modo que el programa se ejecutará como:
 
@@ -59,12 +58,8 @@ de un fichero de salida para almacenar los números capicúa, de modo que el pro
 siendo `n` el número de dígitos de los factores que producen los números capicúa.
 
 ### Entorno de Trabajo
-En prácticas futuras se estudiará cómo gestionar enteramente sus proyectos C++ usando VSC pero por ahora se propone el uso de la línea de comandos
-(ya sea mediante una conexión ssh con la VM o usando la pestaña "Terminal" del VSC) para compilar
-sus programas C++, invocando directamente al compilador g++.
-
-En el caso particular de esta práctica puede Ud. compilar su programa accediendo a su VM, y en el directorio
-de trabajo invocando al compilador:
+En esta práctica debe Ud. compilar su programa accediendo a su VM, e invocando al compilador en su directorio
+de trabajo:
 
 `$ g++ -std=c++14 -g -Wall -o palindrome_prod palindrome_prod.cc`
 
@@ -83,8 +78,6 @@ ejecutando
 
 se borren todos los ficheros del directorio de trabajo salvo los que contengan código fuente
 (`palindrome_prod.*`) y el propio `Makefile`.
-
-
 
 ### Referencias
 * [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) La guía de estilo de código que
