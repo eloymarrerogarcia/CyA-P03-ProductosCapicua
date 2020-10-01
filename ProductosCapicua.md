@@ -15,10 +15,11 @@ Los objetivos de esta práctica son:
 Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
 que se tendrán en cuenta a la hora de evaluar esta práctica:
 
-* El alumnado ha de acreditar conocimientos de la shell de GNU/Linux que le permitan trabajar en ese entorno en su máquina virtual de la asignatura
-* El alumnado ha de acreditar que es capaz de editar ficheros remotos en la VM de la asignautra usando VSC
+* El alumnado ha de acreditar conocimientos para trabajar con la shell de GNU/Linux en su VM
+* Ser capaz de desarrollar, editar remotamente usando VSC, compilar y ejecutar programas escritos en C++ en su VM
 * El código ha de estar escrito de acuerdo al estándar de la [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html).
-* El programa desarrollado deberá compilarse utilizando la herramienta `make` y un fichero `Makefile`.
+* El alumnado ha de acreditar capacidad para editar ficheros remotos en la VM de la asignautra usando VSC
+* El programa desarrollado deberá compilarse utilizando la herramienta `make` y un fichero `Makefile`
 * El comportamiento del programa debe ajustarse a lo solicitado en este documento.
 * Ha de acreditarse capacidad para introducir cambios en el programa desarrollado.
 * Modularidad: el programa ha de escribirse de modo que las diferentes funcionalidades que se precisen sean encapsuladas en funciones y/o métodos cuya extensión textual se mantenga acotada.
